@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -pedantic -mpopcnt -std=gnu++11 -O3 -DNDEBUG  -rdynamic CMakeFiles/week3.dir/week3test.cpp.o CMakeFiles/week3.dir/__/src/fmindex.cpp.o CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.o  -o week3  ../lib/libgtest_main.a ../lib/libgtest.a -lpthread 
