@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexandra/ccb-repos/CCB/fmindex
+CMAKE_SOURCE_DIR = /home/alexandra/CCB/fmindex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexandra/ccb-repos/CCB/fmindex/build
+CMAKE_BINARY_DIR = /home/alexandra/CCB/fmindex/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles /home/alexandra/ccb-repos/CCB/fmindex/build/unittest/CMakeFiles/progress.marks
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	cd /home/alexandra/CCB/fmindex/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles /home/alexandra/CCB/fmindex/build/unittest/CMakeFiles/progress.marks
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/clean
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/preinstall
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/preinstall
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/alexandra/CCB/fmindex/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 unittest/CMakeFiles/week3.dir/rule:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/CMakeFiles/week3.dir/rule
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/CMakeFiles/week3.dir/rule
 .PHONY : unittest/CMakeFiles/week3.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ week3: unittest/CMakeFiles/week3.dir/rule
 
 # fast build rule for target.
 week3/fast:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/build
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/build
 .PHONY : week3/fast
 
 # Convenience name for target.
 unittest/CMakeFiles/week2.dir/rule:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/CMakeFiles/week2.dir/rule
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/CMakeFiles/week2.dir/rule
 .PHONY : unittest/CMakeFiles/week2.dir/rule
 
 # Convenience name for target.
@@ -183,12 +183,12 @@ week2: unittest/CMakeFiles/week2.dir/rule
 
 # fast build rule for target.
 week2/fast:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/build
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/build
 .PHONY : week2/fast
 
 # Convenience name for target.
 unittest/CMakeFiles/week1.dir/rule:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/CMakeFiles/week1.dir/rule
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f CMakeFiles/Makefile2 unittest/CMakeFiles/week1.dir/rule
 .PHONY : unittest/CMakeFiles/week1.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ week1: unittest/CMakeFiles/week1.dir/rule
 
 # fast build rule for target.
 week1/fast:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/build
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/build
 .PHONY : week1/fast
 
 __/src/bidirectionalfmindex.o: __/src/bidirectionalfmindex.cpp.o
@@ -207,7 +207,7 @@ __/src/bidirectionalfmindex.o: __/src/bidirectionalfmindex.cpp.o
 
 # target to build an object file
 __/src/bidirectionalfmindex.cpp.o:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.o
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.o
 .PHONY : __/src/bidirectionalfmindex.cpp.o
 
 __/src/bidirectionalfmindex.i: __/src/bidirectionalfmindex.cpp.i
@@ -216,7 +216,7 @@ __/src/bidirectionalfmindex.i: __/src/bidirectionalfmindex.cpp.i
 
 # target to preprocess a source file
 __/src/bidirectionalfmindex.cpp.i:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.i
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.i
 .PHONY : __/src/bidirectionalfmindex.cpp.i
 
 __/src/bidirectionalfmindex.s: __/src/bidirectionalfmindex.cpp.s
@@ -225,7 +225,7 @@ __/src/bidirectionalfmindex.s: __/src/bidirectionalfmindex.cpp.s
 
 # target to generate assembly for a file
 __/src/bidirectionalfmindex.cpp.s:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.s
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.s
 .PHONY : __/src/bidirectionalfmindex.cpp.s
 
 __/src/fmindex.o: __/src/fmindex.cpp.o
@@ -234,9 +234,9 @@ __/src/fmindex.o: __/src/fmindex.cpp.o
 
 # target to build an object file
 __/src/fmindex.cpp.o:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.o
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/__/src/fmindex.cpp.o
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/__/src/fmindex.cpp.o
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.o
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/__/src/fmindex.cpp.o
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/__/src/fmindex.cpp.o
 .PHONY : __/src/fmindex.cpp.o
 
 __/src/fmindex.i: __/src/fmindex.cpp.i
@@ -245,9 +245,9 @@ __/src/fmindex.i: __/src/fmindex.cpp.i
 
 # target to preprocess a source file
 __/src/fmindex.cpp.i:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.i
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/__/src/fmindex.cpp.i
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/__/src/fmindex.cpp.i
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.i
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/__/src/fmindex.cpp.i
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/__/src/fmindex.cpp.i
 .PHONY : __/src/fmindex.cpp.i
 
 __/src/fmindex.s: __/src/fmindex.cpp.s
@@ -256,9 +256,9 @@ __/src/fmindex.s: __/src/fmindex.cpp.s
 
 # target to generate assembly for a file
 __/src/fmindex.cpp.s:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.s
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/__/src/fmindex.cpp.s
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/__/src/fmindex.cpp.s
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.s
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/__/src/fmindex.cpp.s
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/__/src/fmindex.cpp.s
 .PHONY : __/src/fmindex.cpp.s
 
 week1test.o: week1test.cpp.o
@@ -267,7 +267,7 @@ week1test.o: week1test.cpp.o
 
 # target to build an object file
 week1test.cpp.o:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/week1test.cpp.o
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/week1test.cpp.o
 .PHONY : week1test.cpp.o
 
 week1test.i: week1test.cpp.i
@@ -276,7 +276,7 @@ week1test.i: week1test.cpp.i
 
 # target to preprocess a source file
 week1test.cpp.i:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/week1test.cpp.i
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/week1test.cpp.i
 .PHONY : week1test.cpp.i
 
 week1test.s: week1test.cpp.s
@@ -285,7 +285,7 @@ week1test.s: week1test.cpp.s
 
 # target to generate assembly for a file
 week1test.cpp.s:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/week1test.cpp.s
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/week1test.cpp.s
 .PHONY : week1test.cpp.s
 
 week2test.o: week2test.cpp.o
@@ -294,7 +294,7 @@ week2test.o: week2test.cpp.o
 
 # target to build an object file
 week2test.cpp.o:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/week2test.cpp.o
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/week2test.cpp.o
 .PHONY : week2test.cpp.o
 
 week2test.i: week2test.cpp.i
@@ -303,7 +303,7 @@ week2test.i: week2test.cpp.i
 
 # target to preprocess a source file
 week2test.cpp.i:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/week2test.cpp.i
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/week2test.cpp.i
 .PHONY : week2test.cpp.i
 
 week2test.s: week2test.cpp.s
@@ -312,7 +312,7 @@ week2test.s: week2test.cpp.s
 
 # target to generate assembly for a file
 week2test.cpp.s:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/week2test.cpp.s
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/week2test.cpp.s
 .PHONY : week2test.cpp.s
 
 week3test.o: week3test.cpp.o
@@ -321,7 +321,7 @@ week3test.o: week3test.cpp.o
 
 # target to build an object file
 week3test.cpp.o:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/week3test.cpp.o
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/week3test.cpp.o
 .PHONY : week3test.cpp.o
 
 week3test.i: week3test.cpp.i
@@ -330,7 +330,7 @@ week3test.i: week3test.cpp.i
 
 # target to preprocess a source file
 week3test.cpp.i:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/week3test.cpp.i
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/week3test.cpp.i
 .PHONY : week3test.cpp.i
 
 week3test.s: week3test.cpp.s
@@ -339,7 +339,7 @@ week3test.s: week3test.cpp.s
 
 # target to generate assembly for a file
 week3test.cpp.s:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/week3test.cpp.s
+	cd /home/alexandra/CCB/fmindex/build && $(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/week3test.cpp.s
 .PHONY : week3test.cpp.s
 
 # Help Target
@@ -383,6 +383,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/alexandra/CCB/fmindex/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

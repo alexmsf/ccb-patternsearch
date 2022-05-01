@@ -1,7 +1,7 @@
 # Make file names absolute:
 #
-get_filename_component(filename "/home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-subbuild/googletest-populate-prefix/src/e2239ee6043f73722e7aa812a459f54a28552929.zip" ABSOLUTE)
-get_filename_component(directory "/home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-src" ABSOLUTE)
+get_filename_component(filename "/home/alexandra/CCB/fmindex/build/_deps/googletest-subbuild/googletest-populate-prefix/src/e2239ee6043f73722e7aa812a459f54a28552929.zip" ABSOLUTE)
+get_filename_component(directory "/home/alexandra/CCB/fmindex/build/_deps/googletest-src" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

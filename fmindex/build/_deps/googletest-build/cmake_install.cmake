@@ -1,4 +1,4 @@
-# Install script for directory: /home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-src
+# Install script for directory: /home/alexandra/CCB/fmindex/build/_deps/googletest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-build/googlemock/cmake_install.cmake")
+  include("/home/alexandra/CCB/fmindex/build/_deps/googletest-build/googlemock/cmake_install.cmake")
 
 endif()
 

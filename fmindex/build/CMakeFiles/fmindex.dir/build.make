@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexandra/ccb-repos/CCB/fmindex
+CMAKE_SOURCE_DIR = /home/alexandra/CCB/fmindex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexandra/ccb-repos/CCB/fmindex/build
+CMAKE_BINARY_DIR = /home/alexandra/CCB/fmindex/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/fmindex.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/fmindex.dir/flags.make
 
 CMakeFiles/fmindex.dir/src/main.cpp.o: CMakeFiles/fmindex.dir/flags.make
 CMakeFiles/fmindex.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fmindex.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmindex.dir/src/main.cpp.o -c /home/alexandra/ccb-repos/CCB/fmindex/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fmindex.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmindex.dir/src/main.cpp.o -c /home/alexandra/CCB/fmindex/src/main.cpp
 
 CMakeFiles/fmindex.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fmindex.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/ccb-repos/CCB/fmindex/src/main.cpp > CMakeFiles/fmindex.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/CCB/fmindex/src/main.cpp > CMakeFiles/fmindex.dir/src/main.cpp.i
 
 CMakeFiles/fmindex.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fmindex.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/ccb-repos/CCB/fmindex/src/main.cpp -o CMakeFiles/fmindex.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/CCB/fmindex/src/main.cpp -o CMakeFiles/fmindex.dir/src/main.cpp.s
 
 CMakeFiles/fmindex.dir/src/fmindex.cpp.o: CMakeFiles/fmindex.dir/flags.make
 CMakeFiles/fmindex.dir/src/fmindex.cpp.o: ../src/fmindex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fmindex.dir/src/fmindex.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmindex.dir/src/fmindex.cpp.o -c /home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fmindex.dir/src/fmindex.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmindex.dir/src/fmindex.cpp.o -c /home/alexandra/CCB/fmindex/src/fmindex.cpp
 
 CMakeFiles/fmindex.dir/src/fmindex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fmindex.dir/src/fmindex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.cpp > CMakeFiles/fmindex.dir/src/fmindex.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/CCB/fmindex/src/fmindex.cpp > CMakeFiles/fmindex.dir/src/fmindex.cpp.i
 
 CMakeFiles/fmindex.dir/src/fmindex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fmindex.dir/src/fmindex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.cpp -o CMakeFiles/fmindex.dir/src/fmindex.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/CCB/fmindex/src/fmindex.cpp -o CMakeFiles/fmindex.dir/src/fmindex.cpp.s
 
 CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.o: CMakeFiles/fmindex.dir/flags.make
 CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.o: ../src/bidirectionalfmindex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.o -c /home/alexandra/ccb-repos/CCB/fmindex/src/bidirectionalfmindex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.o -c /home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp
 
 CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/ccb-repos/CCB/fmindex/src/bidirectionalfmindex.cpp > CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp > CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.i
 
 CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/ccb-repos/CCB/fmindex/src/bidirectionalfmindex.cpp -o CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp -o CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.s
 
 # Object files for target fmindex
 fmindex_OBJECTS = \
@@ -110,7 +110,7 @@ fmindex: CMakeFiles/fmindex.dir/src/fmindex.cpp.o
 fmindex: CMakeFiles/fmindex.dir/src/bidirectionalfmindex.cpp.o
 fmindex: CMakeFiles/fmindex.dir/build.make
 fmindex: CMakeFiles/fmindex.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable fmindex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable fmindex"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fmindex.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/fmindex.dir/clean:
 .PHONY : CMakeFiles/fmindex.dir/clean
 
 CMakeFiles/fmindex.dir/depend:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alexandra/ccb-repos/CCB/fmindex /home/alexandra/ccb-repos/CCB/fmindex /home/alexandra/ccb-repos/CCB/fmindex/build /home/alexandra/ccb-repos/CCB/fmindex/build /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles/fmindex.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alexandra/CCB/fmindex/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alexandra/CCB/fmindex /home/alexandra/CCB/fmindex /home/alexandra/CCB/fmindex/build /home/alexandra/CCB/fmindex/build /home/alexandra/CCB/fmindex/build/CMakeFiles/fmindex.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fmindex.dir/depend
 

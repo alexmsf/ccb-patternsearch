@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexandra/ccb-repos/CCB/fmindex
+CMAKE_SOURCE_DIR = /home/alexandra/CCB/fmindex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexandra/ccb-repos/CCB/fmindex/build
+CMAKE_BINARY_DIR = /home/alexandra/CCB/fmindex/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -162,14 +162,14 @@ unittest/clean: _deps/googletest-build/clean
 CMakeFiles/demo.dir/all:
 	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/depend
 	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=1,2,3,4 "Built target demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=1,2,3,4 "Built target demo"
 .PHONY : CMakeFiles/demo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/demo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : CMakeFiles/demo.dir/rule
 
 # Convenience name for target.
@@ -189,14 +189,14 @@ CMakeFiles/demo.dir/clean:
 CMakeFiles/fmindex.dir/all:
 	$(MAKE) -f CMakeFiles/fmindex.dir/build.make CMakeFiles/fmindex.dir/depend
 	$(MAKE) -f CMakeFiles/fmindex.dir/build.make CMakeFiles/fmindex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=5,6,7,8 "Built target fmindex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=5,6,7,8 "Built target fmindex"
 .PHONY : CMakeFiles/fmindex.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fmindex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fmindex.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : CMakeFiles/fmindex.dir/rule
 
 # Convenience name for target.
@@ -217,14 +217,14 @@ unittest/CMakeFiles/week3.dir/all: _deps/googletest-build/googletest/CMakeFiles/
 unittest/CMakeFiles/week3.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/depend
 	$(MAKE) -f unittest/CMakeFiles/week3.dir/build.make unittest/CMakeFiles/week3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=23,24,25,26 "Built target week3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=23,24,25,26 "Built target week3"
 .PHONY : unittest/CMakeFiles/week3.dir/all
 
 # Build rule for subdir invocation for target.
 unittest/CMakeFiles/week3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 unittest/CMakeFiles/week3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : unittest/CMakeFiles/week3.dir/rule
 
 # Convenience name for target.
@@ -245,14 +245,14 @@ unittest/CMakeFiles/week2.dir/all: _deps/googletest-build/googletest/CMakeFiles/
 unittest/CMakeFiles/week2.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/depend
 	$(MAKE) -f unittest/CMakeFiles/week2.dir/build.make unittest/CMakeFiles/week2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=20,21,22 "Built target week2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=20,21,22 "Built target week2"
 .PHONY : unittest/CMakeFiles/week2.dir/all
 
 # Build rule for subdir invocation for target.
 unittest/CMakeFiles/week2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 unittest/CMakeFiles/week2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : unittest/CMakeFiles/week2.dir/rule
 
 # Convenience name for target.
@@ -273,14 +273,14 @@ unittest/CMakeFiles/week1.dir/all: _deps/googletest-build/googletest/CMakeFiles/
 unittest/CMakeFiles/week1.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/depend
 	$(MAKE) -f unittest/CMakeFiles/week1.dir/build.make unittest/CMakeFiles/week1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=17,18,19 "Built target week1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=17,18,19 "Built target week1"
 .PHONY : unittest/CMakeFiles/week1.dir/all
 
 # Build rule for subdir invocation for target.
 unittest/CMakeFiles/week1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 unittest/CMakeFiles/week1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : unittest/CMakeFiles/week1.dir/rule
 
 # Convenience name for target.
@@ -301,14 +301,14 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=11,12 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=11,12 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -328,14 +328,14 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=9,10 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=9,10 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -355,14 +355,14 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=15,16 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=15,16 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -382,14 +382,14 @@ _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=13,14 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=13,14 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/CCB/fmindex/build/CMakeFiles 0
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.

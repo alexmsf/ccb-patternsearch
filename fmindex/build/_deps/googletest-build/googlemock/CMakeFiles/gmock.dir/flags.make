@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -pedantic -mpopcnt -std=gnu++11 -O3 -DNDEBUG   -Wall -Wshadow
 
 CXX_DEFINES = -DALPHABET=5
 
-CXX_INCLUDES = -I/home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-src/googlemock/include -I/home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-src/googlemock -isystem /home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-src/googletest/include -isystem /home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-src/googletest 
+CXX_INCLUDES = -I/home/alexandra/CCB/fmindex/build/_deps/googletest-src/googlemock/include -I/home/alexandra/CCB/fmindex/build/_deps/googletest-src/googlemock -isystem /home/alexandra/CCB/fmindex/build/_deps/googletest-src/googletest/include -isystem /home/alexandra/CCB/fmindex/build/_deps/googletest-src/googletest 
 

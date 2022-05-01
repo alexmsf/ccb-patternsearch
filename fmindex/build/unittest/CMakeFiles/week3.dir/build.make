@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexandra/ccb-repos/CCB/fmindex
+CMAKE_SOURCE_DIR = /home/alexandra/CCB/fmindex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexandra/ccb-repos/CCB/fmindex/build
+CMAKE_BINARY_DIR = /home/alexandra/CCB/fmindex/build
 
 # Include any dependencies generated for this target.
 include unittest/CMakeFiles/week3.dir/depend.make
@@ -59,42 +59,42 @@ include unittest/CMakeFiles/week3.dir/flags.make
 
 unittest/CMakeFiles/week3.dir/week3test.cpp.o: unittest/CMakeFiles/week3.dir/flags.make
 unittest/CMakeFiles/week3.dir/week3test.cpp.o: ../unittest/week3test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object unittest/CMakeFiles/week3.dir/week3test.cpp.o"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/week3.dir/week3test.cpp.o -c /home/alexandra/ccb-repos/CCB/fmindex/unittest/week3test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object unittest/CMakeFiles/week3.dir/week3test.cpp.o"
+	cd /home/alexandra/CCB/fmindex/build/unittest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/week3.dir/week3test.cpp.o -c /home/alexandra/CCB/fmindex/unittest/week3test.cpp
 
 unittest/CMakeFiles/week3.dir/week3test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/week3.dir/week3test.cpp.i"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/ccb-repos/CCB/fmindex/unittest/week3test.cpp > CMakeFiles/week3.dir/week3test.cpp.i
+	cd /home/alexandra/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/CCB/fmindex/unittest/week3test.cpp > CMakeFiles/week3.dir/week3test.cpp.i
 
 unittest/CMakeFiles/week3.dir/week3test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/week3.dir/week3test.cpp.s"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/ccb-repos/CCB/fmindex/unittest/week3test.cpp -o CMakeFiles/week3.dir/week3test.cpp.s
+	cd /home/alexandra/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/CCB/fmindex/unittest/week3test.cpp -o CMakeFiles/week3.dir/week3test.cpp.s
 
 unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.o: unittest/CMakeFiles/week3.dir/flags.make
 unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.o: ../src/fmindex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.o"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/week3.dir/__/src/fmindex.cpp.o -c /home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.o"
+	cd /home/alexandra/CCB/fmindex/build/unittest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/week3.dir/__/src/fmindex.cpp.o -c /home/alexandra/CCB/fmindex/src/fmindex.cpp
 
 unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/week3.dir/__/src/fmindex.cpp.i"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.cpp > CMakeFiles/week3.dir/__/src/fmindex.cpp.i
+	cd /home/alexandra/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/CCB/fmindex/src/fmindex.cpp > CMakeFiles/week3.dir/__/src/fmindex.cpp.i
 
 unittest/CMakeFiles/week3.dir/__/src/fmindex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/week3.dir/__/src/fmindex.cpp.s"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.cpp -o CMakeFiles/week3.dir/__/src/fmindex.cpp.s
+	cd /home/alexandra/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/CCB/fmindex/src/fmindex.cpp -o CMakeFiles/week3.dir/__/src/fmindex.cpp.s
 
 unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.o: unittest/CMakeFiles/week3.dir/flags.make
 unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.o: ../src/bidirectionalfmindex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.o"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.o -c /home/alexandra/ccb-repos/CCB/fmindex/src/bidirectionalfmindex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.o"
+	cd /home/alexandra/CCB/fmindex/build/unittest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.o -c /home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp
 
 unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.i"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/ccb-repos/CCB/fmindex/src/bidirectionalfmindex.cpp > CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.i
+	cd /home/alexandra/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp > CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.i
 
 unittest/CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.s"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/ccb-repos/CCB/fmindex/src/bidirectionalfmindex.cpp -o CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.s
+	cd /home/alexandra/CCB/fmindex/build/unittest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp -o CMakeFiles/week3.dir/__/src/bidirectionalfmindex.cpp.s
 
 # Object files for target week3
 week3_OBJECTS = \
@@ -112,8 +112,8 @@ unittest/week3: unittest/CMakeFiles/week3.dir/build.make
 unittest/week3: lib/libgtest_main.a
 unittest/week3: lib/libgtest.a
 unittest/week3: unittest/CMakeFiles/week3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable week3"
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/week3.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexandra/CCB/fmindex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable week3"
+	cd /home/alexandra/CCB/fmindex/build/unittest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/week3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 unittest/CMakeFiles/week3.dir/build: unittest/week3
@@ -121,10 +121,10 @@ unittest/CMakeFiles/week3.dir/build: unittest/week3
 .PHONY : unittest/CMakeFiles/week3.dir/build
 
 unittest/CMakeFiles/week3.dir/clean:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build/unittest && $(CMAKE_COMMAND) -P CMakeFiles/week3.dir/cmake_clean.cmake
+	cd /home/alexandra/CCB/fmindex/build/unittest && $(CMAKE_COMMAND) -P CMakeFiles/week3.dir/cmake_clean.cmake
 .PHONY : unittest/CMakeFiles/week3.dir/clean
 
 unittest/CMakeFiles/week3.dir/depend:
-	cd /home/alexandra/ccb-repos/CCB/fmindex/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alexandra/ccb-repos/CCB/fmindex /home/alexandra/ccb-repos/CCB/fmindex/unittest /home/alexandra/ccb-repos/CCB/fmindex/build /home/alexandra/ccb-repos/CCB/fmindex/build/unittest /home/alexandra/ccb-repos/CCB/fmindex/build/unittest/CMakeFiles/week3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alexandra/CCB/fmindex/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alexandra/CCB/fmindex /home/alexandra/CCB/fmindex/unittest /home/alexandra/CCB/fmindex/build /home/alexandra/CCB/fmindex/build/unittest /home/alexandra/CCB/fmindex/build/unittest/CMakeFiles/week3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : unittest/CMakeFiles/week3.dir/depend
 

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alexandra/ccb-repos/CCB/fmindex/src/bidirectionalfmindex.cpp" "/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles/demo.dir/src/bidirectionalfmindex.cpp.o"
-  "/home/alexandra/ccb-repos/CCB/fmindex/src/demo.cpp" "/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles/demo.dir/src/demo.cpp.o"
-  "/home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.cpp" "/home/alexandra/ccb-repos/CCB/fmindex/build/CMakeFiles/demo.dir/src/fmindex.cpp.o"
+  "/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp" "/home/alexandra/CCB/fmindex/build/CMakeFiles/demo.dir/src/bidirectionalfmindex.cpp.o"
+  "/home/alexandra/CCB/fmindex/src/demo.cpp" "/home/alexandra/CCB/fmindex/build/CMakeFiles/demo.dir/src/demo.cpp.o"
+  "/home/alexandra/CCB/fmindex/src/fmindex.cpp" "/home/alexandra/CCB/fmindex/build/CMakeFiles/demo.dir/src/fmindex.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

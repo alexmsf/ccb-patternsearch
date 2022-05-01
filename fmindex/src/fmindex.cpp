@@ -100,10 +100,10 @@ void FMIndex::createBWTFromSA(const vector<length_t>& sa) {
 
 void FMIndex::createCounts() {
     // 3 - 7 lines of code
-    int index = 0;
-    for (size_t i=0; i<textLength; i++) {
-        index = sigma.c2i(text[i]);
-        for (int j=0; j<index; j++) counts[i]++;
+    for (size_t i=0; i<sigma.size(); i++) {
+      for (size_t j=0; j<textLength; j++) {
+        if(sigma.c2i(text[j]) < i) counts[i]++;
+      }
     }
 }
 
@@ -190,23 +190,41 @@ void FMIndex::read(const string& base, bool verbose) {
 
 length_t FMIndex::occ(const length_t& charIdx, const length_t& index) const {
     // 2 - 4 lines of code
-    throw runtime_error("occ is not implemented yet!");
+    if(charIdx == 0) return index<=dollarPos ? 0 : 1;
+    length_t occ = 0;
+    for (size_t i=0; i<index; i++) {
+      if(occTable[charIdx - 1][i]==1) occ++;
+    }
+    return occ;
 }
 
 length_t FMIndex::findLF(length_t k) const {
     // 1 - 2 lines of code
-    throw runtime_error("findLF is not implemented yet!");
+    return counts[sigma.c2i(bwt[k])] + occ(sigma.c2i(bwt[k]), k);
 }
 
 length_t FMIndex::findSA(length_t k) const {
     // 4 - 6 lines of code
-    throw runtime_error("findSA is not implemented yet!");
+    if(sparseSA.hasStored(k)) return sparseSA[k];
+    else{
+      int i = 0;
+      while (true) {
+          k = findLF(k);
+          i++;
+          if(sparseSA.hasStored(k)){
+              return ((sparseSA[k]+i) < 0) || ((sparseSA[k]+i) > text.size()) ? 0 : sparseSA[k]+i;
+          }
+      }
+    }
 }
 
 bool FMIndex::addCharLeft(length_t charIdx, const Range& originalRange,
                           Range& newRange) const {
     // 2 - 4 lines of code
-    throw std::runtime_error("addCharLeft is not implemented yet!");
+    length_t begin = originalRange.getBegin();
+    length_t end = originalRange.getEnd();
+    newRange = Range(counts[charIdx] + occ(charIdx, begin), counts[charIdx] + occ(charIdx, end));
+    return !newRange.empty();
 }
 
 // ============================================================================
@@ -215,7 +233,18 @@ bool FMIndex::addCharLeft(length_t charIdx, const Range& originalRange,
 
 vector<length_t> FMIndex::matchExact(const string& str) const {
     // 8 - 12 lines of code
-    throw runtime_error("matchExact is not implemented yet!");
+    vector<length_t> myVec;
+    bool matchLeft = false;
+    Range range = Range(0, text.size());
+    int s_size = str.size();
+    for (int i = (s_size-1); i >= 0; i--) {
+      matchLeft = addCharLeft(sigma.c2i(str[i]),range,range);
+      if(!matchLeft) return myVec;
+    }
+    for (length_t i = range.getBegin(); i < range.getEnd(); i++) {
+      myVec.push_back(findSA(i));
+    }
+    return myVec;
 }
 
 tuple<length_t, length_t, bool>

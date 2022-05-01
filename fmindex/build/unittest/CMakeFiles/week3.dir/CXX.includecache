@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/alexandra/ccb-repos/CCB/fmindex/src/alphabet.h
+/home/alexandra/CCB/fmindex/src/alphabet.h
 array
 -
 cstdlib
@@ -14,11 +14,11 @@ cstdlib
 vector
 -
 assert.h
-/home/alexandra/ccb-repos/CCB/fmindex/src/assert.h
+/home/alexandra/CCB/fmindex/src/assert.h
 
-/home/alexandra/ccb-repos/CCB/fmindex/src/bandmatrix.h
+/home/alexandra/CCB/fmindex/src/bandmatrix.h
 substring.h
-/home/alexandra/ccb-repos/CCB/fmindex/src/substring.h
+/home/alexandra/CCB/fmindex/src/substring.h
 algorithm
 -
 cassert
@@ -32,7 +32,7 @@ string
 vector
 -
 
-/home/alexandra/ccb-repos/CCB/fmindex/src/bitvec.h
+/home/alexandra/CCB/fmindex/src/bitvec.h
 string.h
 -
 cassert
@@ -44,15 +44,15 @@ fstream
 vector
 -
 
-/home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.cpp
+/home/alexandra/CCB/fmindex/src/fmindex.cpp
 fmindex.h
-/home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.h
+/home/alexandra/CCB/fmindex/src/fmindex.h
 bandmatrix.h
-/home/alexandra/ccb-repos/CCB/fmindex/src/bandmatrix.h
+/home/alexandra/CCB/fmindex/src/bandmatrix.h
 fstream
 -
 
-/home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.h
+/home/alexandra/CCB/fmindex/src/fmindex.h
 algorithm
 -
 string
@@ -62,19 +62,19 @@ tuple
 vector
 -
 alphabet.h
-/home/alexandra/ccb-repos/CCB/fmindex/src/alphabet.h
+/home/alexandra/CCB/fmindex/src/alphabet.h
 substring.h
-/home/alexandra/ccb-repos/CCB/fmindex/src/substring.h
+/home/alexandra/CCB/fmindex/src/substring.h
 suffixarray.h
-/home/alexandra/ccb-repos/CCB/fmindex/src/suffixarray.h
+/home/alexandra/CCB/fmindex/src/suffixarray.h
 
-/home/alexandra/ccb-repos/CCB/fmindex/src/substring.h
+/home/alexandra/CCB/fmindex/src/substring.h
 string
 -
 
-/home/alexandra/ccb-repos/CCB/fmindex/src/suffixarray.h
+/home/alexandra/CCB/fmindex/src/suffixarray.h
 bitvec.h
-/home/alexandra/ccb-repos/CCB/fmindex/src/bitvec.h
+/home/alexandra/CCB/fmindex/src/bitvec.h
 fstream
 -
 iostream

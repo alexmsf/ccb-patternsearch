@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alexandra/ccb-repos/CCB/fmindex/src/fmindex.cpp" "/home/alexandra/ccb-repos/CCB/fmindex/build/unittest/CMakeFiles/week2.dir/__/src/fmindex.cpp.o"
-  "/home/alexandra/ccb-repos/CCB/fmindex/unittest/week2test.cpp" "/home/alexandra/ccb-repos/CCB/fmindex/build/unittest/CMakeFiles/week2.dir/week2test.cpp.o"
+  "/home/alexandra/CCB/fmindex/src/fmindex.cpp" "/home/alexandra/CCB/fmindex/build/unittest/CMakeFiles/week2.dir/__/src/fmindex.cpp.o"
+  "/home/alexandra/CCB/fmindex/unittest/week2test.cpp" "/home/alexandra/CCB/fmindex/build/unittest/CMakeFiles/week2.dir/week2test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -23,8 +23,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "/home/alexandra/ccb-repos/CCB/fmindex/build/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/alexandra/CCB/fmindex/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/alexandra/CCB/fmindex/build/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
