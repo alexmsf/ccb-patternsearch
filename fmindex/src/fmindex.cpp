@@ -192,9 +192,10 @@ length_t FMIndex::occ(const length_t& charIdx, const length_t& index) const {
     // 2 - 4 lines of code
     if(charIdx == 0) return index<=dollarPos ? 0 : 1;
     length_t occ = 0;
-    for (size_t i=0; i<index; i++) {
-      if(occTable[charIdx - 1][i]==1) occ++;
-    }
+    //for (size_t i=0; i<index; i++) {
+    //  if(occTable[charIdx - 1][i]==1) occ++;
+    //}
+    occ = occTable[charIdx-1].rank(index);
     return occ;
 }
 
