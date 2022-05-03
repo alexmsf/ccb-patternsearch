@@ -27,7 +27,7 @@ class SparseSuffixArray {
      */
     bool hasStored(const length_t i) const {
         // 1 line of code
-        return bitvector[i];
+        return ((i % sparsenessFactor) == 0);
     }
 
     /**
@@ -40,7 +40,7 @@ class SparseSuffixArray {
     length_t operator[](const length_t i) const {
         assert(hasStored(i));
         // 1 line of code
-        return bitvector.rank(i);
+        return sparseSA[i/sparsenessFactor];
     }
 
     /**
@@ -48,21 +48,13 @@ class SparseSuffixArray {
      * @param sa the original suffix array
      */
     void createSparseSA(const std::vector<length_t>& sa) {
-        // create a bitvector to keep track of which elements are stored
-        // Only necessary if every ith suffix is stored (comment out
-        // or delete if every ith index in suffix array is stored)
-        bitvector = Bitvec(sa.size());
         sparseSA.resize(sa.size());
-        for (length_t i = 0; i < sa.size(); i++) {
-            if (sa[i]%sparsenessFactor == 0) {
-                sparseSA[i/sparsenessFactor] = sa[i];
-                bitvector[i] = true;
-            }
-        }
-
-        // Only necessary if every ith suffix is stored (comment out
-        // or delete if every ith entry in suffix array is stored)
-        bitvector.index();
+         for (length_t i = 0; i < sa.size(); i++) {
+             // 2 - 3 lines of code
+             if((i % sparsenessFactor) == 0){
+               sparseSA[i/sparsenessFactor] = sa[i];
+             }
+         }
     }
 
     SparseSuffixArray(length_t sparseness) : sparsenessFactor(sparseness) {

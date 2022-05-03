@@ -221,9 +221,7 @@ length_t FMIndex::findSA(length_t k) const {
 bool FMIndex::addCharLeft(length_t charIdx, const Range& originalRange,
                           Range& newRange) const {
     // 2 - 4 lines of code
-    length_t begin = originalRange.getBegin();
-    length_t end = originalRange.getEnd();
-    newRange = Range(counts[charIdx] + occ(charIdx, begin), counts[charIdx] + occ(charIdx, end));
+    newRange = Range(counts[charIdx] + occ(charIdx, originalRange.getBegin()), counts[charIdx] + occ(charIdx, originalRange.getEnd()));
     return !newRange.empty();
 }
 
@@ -233,18 +231,15 @@ bool FMIndex::addCharLeft(length_t charIdx, const Range& originalRange,
 
 vector<length_t> FMIndex::matchExact(const string& str) const {
     // 8 - 12 lines of code
-    vector<length_t> myVec;
+    vector<length_t> result;
     bool matchLeft = false;
     Range range = Range(0, text.size());
-    int s_size = str.size();
-    for (int i = (s_size-1); i >= 0; i--) {
-      matchLeft = addCharLeft(sigma.c2i(str[i]),range,range);
-      if(!matchLeft) return myVec;
+    for (int i = (str.size()-1); i >= 0; i--) {
+      matchLeft = addCharLeft(sigma.c2i(str[i]), range, range);
+      if(!matchLeft) return result;
     }
-    for (length_t i = range.getBegin(); i < range.getEnd(); i++) {
-      myVec.push_back(findSA(i));
-    }
-    return myVec;
+    for (length_t i = range.getBegin(); i < range.getEnd(); i++) result.push_back(findSA(i));
+    return result;
 }
 
 tuple<length_t, length_t, bool>
