@@ -51,6 +51,12 @@ bandmatrix.h
 /home/alexandra/CCB/fmindex/src/bandmatrix.h
 fstream
 -
+iostream
+-
+string
+-
+cmath
+-
 
 /home/alexandra/CCB/fmindex/src/fmindex.h
 algorithm

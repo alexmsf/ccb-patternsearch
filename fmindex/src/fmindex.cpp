@@ -230,6 +230,10 @@ bool FMIndex::addCharLeft(length_t charIdx, const Range& originalRange,
 // FMIndex Integration: week 1
 // ============================================================================
 
+#include <iostream>
+using namespace std;
+#include <string>
+
 vector<length_t> FMIndex::matchExact(const string& str) const {
     // 8 - 12 lines of code
     vector<length_t> result;
@@ -243,11 +247,35 @@ vector<length_t> FMIndex::matchExact(const string& str) const {
     return result;
 }
 
+#include <cmath>
+
 tuple<length_t, length_t, bool>
 FMIndex::bestPairedMatch(const pair<string, string>& reads,
                          const length_t& insSize) const {
     // 15 - 25 lines of code
-    throw runtime_error("bestPairedMatch is not implemented yet!");
+    
+    string p1 = reads.first, p2 = reads.second, pRev1 = revCompl(p1), pRev2 = revCompl(p2);
+    vector<length_t> matchExactP1 = matchExact(p1), matchExactPRev1 = matchExact(pRev1), matchExactP2 = matchExact(p2), matchExactPRev2 = matchExact(pRev2);
+    
+    int currentMin = INT64_MAX, insertionSize;
+    tuple<length_t, length_t, bool> currentBest;
+
+    for(int i=0; i<=matchExactP1.size(); i++){
+        for(int j=0; j<=matchExactP2.size(); j++){
+            insertionSize = (matchExactPRev2[j] + pRev2.size()) - matchExactP1[i];
+            if(abs((int)insSize - insertionSize) < currentMin){
+                currentMin = abs((int)insSize - insertionSize);
+                currentBest = tuple<length_t, length_t, int>(matchExactP1[i], matchExactPRev2[j], 1);
+            }
+            insertionSize = (matchExactPRev1[i] + pRev1.size()) - matchExactP2[i];
+            if(abs((int)insSize - insertionSize) < currentMin){
+                currentMin = abs((int)insSize - insertionSize);
+                currentBest = tuple<length_t, length_t, int>(matchExactP1[i], matchExactPRev2[j], 0);
+            }
+        }
+    }
+
+    return currentBest;    
 }
 
 // ============================================================================
