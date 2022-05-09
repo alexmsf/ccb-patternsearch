@@ -213,7 +213,7 @@ length_t FMIndex::findSA(length_t k) const {
           k = findLF(k);
           i++;
           if(sparseSA.hasStored(k)){
-              return ((sparseSA[k]+i) < 0) || ((sparseSA[k]+i) > text.size()) ? 0 : sparseSA[k]+i;
+              return ((sparseSA[k]+i) < 0) || ((sparseSA[k]+i) >= text.size()) ? 0 : sparseSA[k]+i;
           }
       }
     }
@@ -254,28 +254,33 @@ FMIndex::bestPairedMatch(const pair<string, string>& reads,
                          const length_t& insSize) const {
     // 15 - 25 lines of code
     
-    string p1 = reads.first, p2 = reads.second, pRev1 = revCompl(p1), pRev2 = revCompl(p2);
-    vector<length_t> matchExactP1 = matchExact(p1), matchExactPRev1 = matchExact(pRev1), matchExactP2 = matchExact(p2), matchExactPRev2 = matchExact(pRev2);
-    
-    int currentMin = INT64_MAX, insertionSize;
-    tuple<length_t, length_t, bool> currentBest;
+    vector<length_t> matchesRead1 = matchExact(reads.first), matchesRead2 = matchExact(reads.second), matchesRead1Rev = matchExact(revCompl(reads.first)), matchesRead2Rev = matchExact(revCompl(reads.second));
+    int currentBestInsert = text.size();
+    length_t currentBestRead1, currentBestRead2;
+    bool is2Rev = false;
 
-    for(int i=0; i<=matchExactP1.size(); i++){
-        for(int j=0; j<=matchExactP2.size(); j++){
-            insertionSize = (matchExactPRev2[j] + pRev2.size()) - matchExactP1[i];
-            if(abs((int)insSize - insertionSize) < currentMin){
-                currentMin = abs((int)insSize - insertionSize);
-                currentBest = tuple<length_t, length_t, int>(matchExactP1[i], matchExactPRev2[j], 1);
-            }
-            insertionSize = (matchExactPRev1[i] + pRev1.size()) - matchExactP2[i];
-            if(abs((int)insSize - insertionSize) < currentMin){
-                currentMin = abs((int)insSize - insertionSize);
-                currentBest = tuple<length_t, length_t, int>(matchExactP1[i], matchExactPRev2[j], 0);
-            }
+    for (size_t i = 0; i < matchesRead1.size(); i++) {
+      for (size_t j = 0; j < matchesRead2Rev.size(); j++) {
+        if(currentBestInsert >= abs(abs((int)(matchesRead2Rev[j] + reads.second.size() - matchesRead1[i]))-(int)insSize)){
+          currentBestInsert = abs(abs((int)(matchesRead2Rev[j] + reads.second.size() - matchesRead1[i]))-(int)insSize);
+          currentBestRead1 = matchesRead1[i];
+          currentBestRead2 = matchesRead2Rev[j];
+          is2Rev = 1;
         }
+      }
+    }
+    for (size_t i = 0; i < matchesRead2.size(); i++) {
+      for (size_t j = 0; j < matchesRead1Rev.size(); j++) {
+        if(currentBestInsert >= abs(abs((int)(matchesRead1Rev[j] + reads.first.size() - matchesRead2[i]))-(int)insSize)){
+          currentBestInsert = abs(abs((int)(matchesRead1Rev[j] + reads.first.size() - matchesRead2[i]))-(int)insSize);
+          currentBestRead2 = matchesRead2[i];
+          currentBestRead1 = matchesRead1Rev[j];
+          is2Rev = 0;
+        }
+      }
     }
 
-    return currentBest;    
+    return std::make_tuple(currentBestRead1,currentBestRead2,is2Rev);
 }
 
 // ============================================================================
