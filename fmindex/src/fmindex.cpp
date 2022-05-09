@@ -213,7 +213,7 @@ length_t FMIndex::findSA(length_t k) const {
           k = findLF(k);
           i++;
           if(sparseSA.hasStored(k)){
-              return ((sparseSA[k]+i) < 0) || ((sparseSA[k]+i) > text.size()) ? 0 : sparseSA[k]+i;
+              return ((sparseSA[k]+i) < 0) || ((sparseSA[k]+i) >= text.size()) ? 0 : sparseSA[k]+i;
           }
       }
     }
@@ -230,6 +230,10 @@ bool FMIndex::addCharLeft(length_t charIdx, const Range& originalRange,
 // FMIndex Integration: week 1
 // ============================================================================
 
+#include <iostream>
+using namespace std;
+#include <string>
+
 vector<length_t> FMIndex::matchExact(const string& str) const {
     // 8 - 12 lines of code
     vector<length_t> result;
@@ -243,11 +247,40 @@ vector<length_t> FMIndex::matchExact(const string& str) const {
     return result;
 }
 
+#include <cmath>
+
 tuple<length_t, length_t, bool>
 FMIndex::bestPairedMatch(const pair<string, string>& reads,
                          const length_t& insSize) const {
     // 15 - 25 lines of code
-    throw runtime_error("bestPairedMatch is not implemented yet!");
+    
+    vector<length_t> matchesRead1 = matchExact(reads.first), matchesRead2 = matchExact(reads.second), matchesRead1Rev = matchExact(revCompl(reads.first)), matchesRead2Rev = matchExact(revCompl(reads.second));
+    int currentBestInsert = text.size();
+    length_t currentBestRead1, currentBestRead2;
+    bool is2Rev = false;
+
+    for (size_t i = 0; i < matchesRead1.size(); i++) {
+      for (size_t j = 0; j < matchesRead2Rev.size(); j++) {
+        if(currentBestInsert >= abs(abs((int)(matchesRead2Rev[j] + reads.second.size() - matchesRead1[i]))-(int)insSize)){
+          currentBestInsert = abs(abs((int)(matchesRead2Rev[j] + reads.second.size() - matchesRead1[i]))-(int)insSize);
+          currentBestRead1 = matchesRead1[i];
+          currentBestRead2 = matchesRead2Rev[j];
+          is2Rev = 1;
+        }
+      }
+    }
+    for (size_t i = 0; i < matchesRead2.size(); i++) {
+      for (size_t j = 0; j < matchesRead1Rev.size(); j++) {
+        if(currentBestInsert >= abs(abs((int)(matchesRead1Rev[j] + reads.first.size() - matchesRead2[i]))-(int)insSize)){
+          currentBestInsert = abs(abs((int)(matchesRead1Rev[j] + reads.first.size() - matchesRead2[i]))-(int)insSize);
+          currentBestRead2 = matchesRead2[i];
+          currentBestRead1 = matchesRead1Rev[j];
+          is2Rev = 0;
+        }
+      }
+    }
+
+    return std::make_tuple(currentBestRead1,currentBestRead2,is2Rev);
 }
 
 // ============================================================================
