@@ -32,6 +32,18 @@ string
 vector
 -
 
+/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp
+bidirectionalfmindex.h
+/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
+bandmatrix.h
+/home/alexandra/CCB/fmindex/src/bandmatrix.h
+
+/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
+cumulativebitvec.h
+/home/alexandra/CCB/fmindex/src/cumulativebitvec.h
+fmindex.h
+/home/alexandra/CCB/fmindex/src/fmindex.h
+
 /home/alexandra/CCB/fmindex/src/bitvec.h
 string.h
 -
@@ -42,6 +54,28 @@ cstdint
 fstream
 -
 vector
+-
+
+/home/alexandra/CCB/fmindex/src/cumulativebitvec.h
+array
+-
+cstdlib
+-
+vector
+-
+alphabet.h
+/home/alexandra/CCB/fmindex/src/alphabet.h
+bitvec.h
+/home/alexandra/CCB/fmindex/src/bitvec.h
+
+/home/alexandra/CCB/fmindex/src/demo.cpp
+bandmatrix.h
+/home/alexandra/CCB/fmindex/src/bandmatrix.h
+bidirectionalfmindex.h
+/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
+searchscheme.h
+/home/alexandra/CCB/fmindex/src/searchscheme.h
+chrono
 -
 
 /home/alexandra/CCB/fmindex/src/fmindex.cpp
@@ -73,6 +107,12 @@ substring.h
 /home/alexandra/CCB/fmindex/src/substring.h
 suffixarray.h
 /home/alexandra/CCB/fmindex/src/suffixarray.h
+
+/home/alexandra/CCB/fmindex/src/searchscheme.h
+bidirectionalfmindex.h
+/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
+sstream
+-
 
 /home/alexandra/CCB/fmindex/src/substring.h
 string

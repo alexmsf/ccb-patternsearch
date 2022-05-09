@@ -248,6 +248,7 @@ vector<length_t> FMIndex::matchExact(const string& str) const {
 }
 
 #include <cmath>
+using namespace std;
 
 tuple<length_t, length_t, bool>
 FMIndex::bestPairedMatch(const pair<string, string>& reads,
@@ -280,7 +281,7 @@ FMIndex::bestPairedMatch(const pair<string, string>& reads,
       }
     }
 
-    return std::make_tuple(currentBestRead1,currentBestRead2,is2Rev);
+    return make_tuple(currentBestRead1,currentBestRead2,is2Rev);
 }
 
 // ============================================================================

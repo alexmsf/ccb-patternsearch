@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+using namespace std;
 
 typedef uint32_t length_t;
 
@@ -144,8 +145,14 @@ class BandedMatrix {
     length_t updateMatrixCell(bool notMatch, unsigned int row,
                               unsigned int column) {
         // 6 lines of code
-        throw std::runtime_error(
-            "UpdateMatrixCell has not been implemented yet!");
+        
+        if(column==0) at(row, column) = row;
+        else if(row==0) at(row, column) = column;
+        else {
+            int s = notMatch ? 1 : 0;
+            at(row, column) = min(min(at(row-1, column-1) + s, at(row, column-1) + 1), at(row-1, column) + 1);
+        }
+        return at(row, column);
     }
 
     /**
@@ -157,8 +164,13 @@ class BandedMatrix {
      */
     length_t updateMatrixRow(const Substring& pattern, length_t row, char c) {
         // 5 - 7 lines of code
-        throw std::runtime_error(
-            "updateMatrixRow has not been implemented yet!");
+        
+        vector<length_t> rowValues;
+        for(int j=0; j<=n; j++){
+            bool match = pattern[j-1] == c ? true : false;
+            rowValues.push_back(updateMatrixCell(match, row, j));
+        }
+        return distance(rowValues.begin(), min_element(rowValues.begin(), rowValues.end()));
     }
 
     /**
