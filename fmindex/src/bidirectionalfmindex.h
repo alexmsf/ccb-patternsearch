@@ -309,18 +309,13 @@ class Search {
     }
 };
 
-class BiFMIndex;
-typedef bool (BiFMIndex::*AddCharPtr)(length_t, const RangePair&,
-                                      RangePair&) const;
-
 class BiFMIndex : public FMIndex {
   private:
-    CumulativeBitvectors<ALPHABET> forwardOccTable;
-    CumulativeBitvectors<ALPHABET> backwardOccTable;
+    CumulativeBitvectors<ALPHABET> reverseOccTable;
+    CumulativeBitvectors<ALPHABET> originalOccTable;
 
     // search direction variables
     Direction dir;
-    AddCharPtr addChar;
 
     void read(const std::string& base, bool verbose);
 
@@ -387,15 +382,26 @@ class BiFMIndex : public FMIndex {
     }
 
     /**
-     * This function matches a string exactly starting form startRange
+     * This function matches a string exactly starting form startRange while
+     * keeping track of the ranges in both directions
      * @param string the string to match
-     * @param ranges, the start ranges to search (default empty range), if
+     * @param ranges, the start ranges to search, if
      * this range is empty the procedure must search in the whole index
      * @returns the pair of ranges that matches string
      */
     RangePair matchExactBidirectionally(const Substring& str,
-                                        RangePair ranges = RangePair(0, 0, 0,
-                                                                     0)) const;
+                                        RangePair ranges) const;
+
+    /**
+     * This function matches a string exactly starting from the empty string,
+     * while keeping track of the ranges in both directions
+     * @param string the string to match
+     * @returns the pair of ranges that matches string
+     */
+    RangePair matchExactBidirectionally(const Substring& str) const {
+        return matchExactBidirectionally(
+            str, RangePair(0, textLength, 0, textLength));
+    }
 
     /**
      * Sets the search direction of the fm-index
@@ -403,8 +409,6 @@ class BiFMIndex : public FMIndex {
      */
     void setDirection(Direction d) {
         dir = d;
-        addChar =
-            (d == FORWARD) ? &BiFMIndex::addCharRight : &BiFMIndex::addCharLeft;
     }
 
     // ============================================================================

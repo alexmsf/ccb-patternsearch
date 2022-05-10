@@ -13,6 +13,10 @@ cstdlib
 -
 vector
 -
+cstdint
+-
+string
+-
 assert.h
 /home/alexandra/CCB/fmindex/src/assert.h
 
@@ -32,18 +36,6 @@ string
 vector
 -
 
-/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp
-bidirectionalfmindex.h
-/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
-bandmatrix.h
-/home/alexandra/CCB/fmindex/src/bandmatrix.h
-
-/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
-cumulativebitvec.h
-/home/alexandra/CCB/fmindex/src/cumulativebitvec.h
-fmindex.h
-/home/alexandra/CCB/fmindex/src/fmindex.h
-
 /home/alexandra/CCB/fmindex/src/bitvec.h
 string.h
 -
@@ -55,18 +47,6 @@ fstream
 -
 vector
 -
-
-/home/alexandra/CCB/fmindex/src/cumulativebitvec.h
-array
--
-cstdlib
--
-vector
--
-alphabet.h
-/home/alexandra/CCB/fmindex/src/alphabet.h
-bitvec.h
-/home/alexandra/CCB/fmindex/src/bitvec.h
 
 /home/alexandra/CCB/fmindex/src/fmindex.cpp
 fmindex.h

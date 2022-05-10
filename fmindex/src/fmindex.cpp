@@ -91,7 +91,6 @@ void readSA(const string& filename, vector<length_t>& sa, size_t saSizeHint) {
 
 void FMIndex::createBWTFromSA(const vector<length_t>& sa) {
     // 5-10 lines of code
-    // SLIDE 32 FMINDEX
     bwt.resize(sa.size());
     for (size_t i=0; i<sa.size(); i++){
         bwt[i] = sa[i] > 0 ? text[sa[i]-1] : '$';
@@ -101,8 +100,8 @@ void FMIndex::createBWTFromSA(const vector<length_t>& sa) {
 void FMIndex::createCounts() {
     // 3 - 7 lines of code
     for (size_t i=0; i<sigma.size(); i++) {
-      for (size_t j=0; j<textLength; j++) {
-        if(sigma.c2i(text[j]) < i) counts[i]++;
+      for (length_t j=0; j<textLength; j++) {
+        if(sigma.c2i(text[j]) < (int)i) counts[i]++;
       }
     }
 }
@@ -192,9 +191,6 @@ length_t FMIndex::occ(const length_t& charIdx, const length_t& index) const {
     // 2 - 4 lines of code
     if(charIdx == 0) return index<=dollarPos ? 0 : 1;
     length_t occ = 0;
-    //for (size_t i=0; i<index; i++) {
-    //  if(occTable[charIdx - 1][i]==1) occ++;
-    //}
     occ = occTable[charIdx-1].rank(index);
     return occ;
 }
@@ -248,13 +244,11 @@ vector<length_t> FMIndex::matchExact(const string& str) const {
 }
 
 #include <cmath>
-using namespace std;
 
 tuple<length_t, length_t, bool>
 FMIndex::bestPairedMatch(const pair<string, string>& reads,
-                         const length_t& insSize) const {
+                         const length_t& meanInsSize) const {
     // 15 - 25 lines of code
-    
     vector<length_t> matchesRead1 = matchExact(reads.first), matchesRead2 = matchExact(reads.second), matchesRead1Rev = matchExact(revCompl(reads.first)), matchesRead2Rev = matchExact(revCompl(reads.second));
     int currentBestInsert = text.size();
     length_t currentBestRead1, currentBestRead2;
@@ -262,8 +256,8 @@ FMIndex::bestPairedMatch(const pair<string, string>& reads,
 
     for (size_t i = 0; i < matchesRead1.size(); i++) {
       for (size_t j = 0; j < matchesRead2Rev.size(); j++) {
-        if(currentBestInsert >= abs(abs((int)(matchesRead2Rev[j] + reads.second.size() - matchesRead1[i]))-(int)insSize)){
-          currentBestInsert = abs(abs((int)(matchesRead2Rev[j] + reads.second.size() - matchesRead1[i]))-(int)insSize);
+        if(currentBestInsert >= abs(abs((int)(matchesRead2Rev[j] + reads.second.size() - matchesRead1[i]))-(int)meanInsSize)){
+          currentBestInsert = abs(abs((int)(matchesRead2Rev[j] + reads.second.size() - matchesRead1[i]))-(int)meanInsSize);
           currentBestRead1 = matchesRead1[i];
           currentBestRead2 = matchesRead2Rev[j];
           is2Rev = 1;
@@ -272,8 +266,8 @@ FMIndex::bestPairedMatch(const pair<string, string>& reads,
     }
     for (size_t i = 0; i < matchesRead2.size(); i++) {
       for (size_t j = 0; j < matchesRead1Rev.size(); j++) {
-        if(currentBestInsert >= abs(abs((int)(matchesRead1Rev[j] + reads.first.size() - matchesRead2[i]))-(int)insSize)){
-          currentBestInsert = abs(abs((int)(matchesRead1Rev[j] + reads.first.size() - matchesRead2[i]))-(int)insSize);
+        if(currentBestInsert >= abs(abs((int)(matchesRead1Rev[j] + reads.first.size() - matchesRead2[i]))-(int)meanInsSize)){
+          currentBestInsert = abs(abs((int)(matchesRead1Rev[j] + reads.first.size() - matchesRead2[i]))-(int)meanInsSize);
           currentBestRead2 = matchesRead2[i];
           currentBestRead1 = matchesRead1Rev[j];
           is2Rev = 0;
@@ -290,7 +284,11 @@ FMIndex::bestPairedMatch(const pair<string, string>& reads,
 void FMIndex::extendFMPos(const Range& range, const length_t& depth,
                           std::vector<FMPosExt>& stack) const {
     // 4 lines of code
-    throw std::runtime_error("extendFMPos has not been implemented yet!");
+    Range r=range;
+    for (length_t i=1; i<sigma.size(); i++){
+        if(addCharLeft(i, range, r)) stack.push_back(FMPosExt(sigma.i2c(i), r, depth+1));
+    }
+
 }
 
 void FMIndex::convertFMOccToTextOcc(const FMOcc& fmocc,
@@ -313,16 +311,25 @@ vector<TextOcc> FMIndex::naiveApproxMatch(const string& pattern,
     vector<FMPosExt> stack;
     stack.reserve((pattern.size() + k + 1) * (sigma.size() - 1));
 
-    // TODO create the matrix for this pattern and edit distance value (1 line)
+    // Create the matrix for this pattern and edit distance value
+    BandedMatrix matrix(pattern.size(), k, 0);
 
-    // TODO Create the first 4 entries in the stack, corresponding to the "A",
+    // Create the first 4 entries in the stack, corresponding to the "A",
     // "C", "G" and "T" strings with depth 1
+    extendFMPos(Range(0, text.size()), 0, stack);
 
-    // create a substring from pattern with backward direction (1 line)
+    // Create a substring from pattern with backward direction (1 line)
     Substring p(pattern, BACKWARD);
 
     while (!stack.empty()) {
-        // 10 - 15 lines of code
+
+        // Get the final element from the stack and pop it back (= remove from
+        // the stack)
+        // Uncomment these lines
+        /*  FMPosExt currentPos = stack.back();
+         stack.pop_back(); */
+
+        // 7 - 15 lines of code
         throw std::runtime_error(
             "naiveApproxMatch has not been implemented yet");
     }

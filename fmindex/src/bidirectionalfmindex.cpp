@@ -17,8 +17,8 @@ void BiFMIndex::read(const string& base, bool verbose) {
     createRevBWTFromRevSA(revSA, revBWT);
 
     // step 2 create the cumulative bit vectors
-    backwardOccTable = CumulativeBitvectors<ALPHABET>(sigma, bwt);
-    forwardOccTable = CumulativeBitvectors<ALPHABET>(sigma, revBWT);
+    originalOccTable = CumulativeBitvectors<ALPHABET>(sigma, bwt);
+    reverseOccTable = CumulativeBitvectors<ALPHABET>(sigma, revBWT);
 }
 
 void BiFMIndex::createRevBWTFromRevSA(const vector<length_t>& revSA,
@@ -50,10 +50,9 @@ void BiFMIndex::extendFMPos(const RangePair& ranges, const length_t& depth,
 RangePair BiFMIndex::matchExactBidirectionally(const Substring& str,
                                                RangePair ranges) const {
 
-    // Match the string in one direction, but keep track of the ranges in both
-    // directions. Return the ranges corresponding to the match. If no match can
-    // be found the returned ranges should be empty
-
+    // assert that the direction of str and the BiFMIndex match, leave this line
+    // in! If your program blocks on this line it means that somewhere in your
+    // code you forgot to correctly set the direction of the index
     assert(dir == str.getDirection());
 
     // 5 - 10 lines of code
@@ -65,6 +64,10 @@ void BiFMIndex::recApproxMatch(const Search& s, const BiFMOcc& startOcc,
                                vector<FMOcc>& occ,
                                const vector<Substring>& parts, const int& idx) {
 
+    // Fill in the TODO's at lines 70 and 77. You can use the provided code
+    // in function FMIndex::naiveApproxMatch in file fmindex.cpp as inspiration
+    // Afterwards fill in the while loop at line 88
+
     // TODO create the matrix for the current part, with the correct width and
     // intialization value (4 - 5 lines)
 
@@ -72,14 +75,22 @@ void BiFMIndex::recApproxMatch(const Search& s, const BiFMOcc& startOcc,
     vector<BiFMPosExt> stack; // stack with positions to visit
     stack.reserve((parts.back().end()) * ALPHABET);
 
-    // TODO set the direction (1 -2 lines)
+    // TODO set the direction (1 - 3 lines)
+    // use function setDirection()
 
-    // TODO add the children of the start occurrence to the stack, make sure
-    // they have depth 1 (row in this matrix)
+    // Add the children of the start occurrence to the stack, make sure
+    // they have depth/row 1
+    extendFMPos(startOcc.getRanges(), 0, stack);
 
     // Branch and bound algorithm
     while (!stack.empty()) {
-        // 15 - 25 lines of code
+
+        // Get the final element from the stack and pop it back (= remove from
+        // the stack)
+        // Uncomment these lines
+        /* BiFMPosExt currentPos = stack.back();
+        stack.pop_back(); */
+        // 10 - 25 lines of code
         throw runtime_error("recApproxMatch has not been implemented yet");
     }
 }

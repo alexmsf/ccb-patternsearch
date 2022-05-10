@@ -340,19 +340,46 @@ This is illustrated below:
 ![](../images/paired-end-reads.png?raw=true)
 
 The insert size typically follows a normal distribution for which the mean value is known.
-Therefore, given a pair of reads, you should find the alignment positions where both reads map to different strands, and where the distance between the extreme ends of the reads best match the provided insert size.
+Therefore, given a pair of reads, you should find the alignment positions where both reads map to different strands, and where the distance between the extreme ends of the reads best match the provided mean insert size.
 
 Update the function `bestPairedMatch` in the file `fmindex.cpp`
 ```C++
 tuple<length_t, length_t, bool>
 FMIndex::bestPairedMatch(const pair<string, string>& reads,
-                         const length_t& insSize) const
+                         const length_t& meanInsSize) const
 ```
 
-This function takes a pair of reads and an insert size and finds the best paired match.
+This function takes a pair of reads and the mean insert size and finds the best paired match.
 The function returns a tuple of three elements: the first contains the start position of the match of the first read (of the pair), the second element contains the start position of the match of the second read and the third element is a bool which is true if the first read is matched along the forward strand.
 Note that start positions are always reported for the forward strand.
-Choose the combination of start positions that is the most likely given the insert size. 
+Choose the combination of start positions that is the most likely given the mean insert size. 
+
+---
+**EXAMPLE**
+
+Consider a pair of reads and a mean insert size of `900`:
+
+"CCCTGCCCAGGCAACAGCCCCAGCCCCCGAGCTGACTGTTGTCGCAACTA" (read 1 of the pair) and 
+
+"TGAGTTCTGCATTAAAGCGGACACGTCGAAAATACCGTTGCCAACATTTT" (read 2 of the pair).
+
+The length of both reads is 50.
+
+First, we will assume that read 1 maps to the forward strand and read 2 maps to the reverse strand.
+
+Read 1 matches exactly to position `2825189` in the reference genome. 
+The reverse complement of read 2 matches exactly to position `2826121` in the reference genome. 
+Hence, for this assumption only one combination is possible. 
+The insertion size for this combination equals the between the end position of the match of the reverse complement of read 2 (`=(2826121 + 50)`) and the start position of the match of read 1 (`2825189`), which equals `982` .
+
+Next, assume that read 1 maps to the reverse strand.
+The reverse complement of read 1 matches eactly to start positions `1062049` and `1290352`. Read 2 matches exactly to position `1061117`. 
+Hence for this assumption two combinations are possible. 
+The insert size equals the difference between the end position of the match of the reverse complement of read 1 (`1062049 + 49` or `1290352 + 49`)) and the start position of the match of read 2 (`1061117`).
+These possible insert sizes are `981` and `229284`.
+
+The insert size that is the closest to our mean insert size (`900`) is `981`. 
+Thus, we map the reverse complement of read 1 to position `1062049` and read 2 to position `1061117`. The tuple that the function should return is `{1062049, 1061117, 0}`. The final value is 0 because we mapped the reverse complement of read 1 to the forward strand. 
 
 ---
 **HINT**:

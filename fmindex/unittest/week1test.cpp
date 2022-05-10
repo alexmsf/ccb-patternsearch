@@ -156,6 +156,8 @@ TEST_F(FunctionalityTest, findSATest) {
         auto v = values[i / 20];
         EXPECT_EQ(fmindex.findSA(i), v);
     }
+
+    EXPECT_EQ(fmindex.findSA(626743), 0);
 }
 
 TEST_F(FunctionalityTest, AddCharLeftTest) {

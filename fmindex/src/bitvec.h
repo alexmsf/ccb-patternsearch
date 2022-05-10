@@ -40,8 +40,8 @@
 
 class Bitref {
   private:
-    size_t& wordRef; // reference to a word in the bitvector
-    size_t bitmask;  // bitmask of the form (1 << bitIdx)
+    uint64_t& wordRef; // reference to a word in the bitvector
+    uint64_t bitmask;  // bitmask of the form (1 << bitIdx)
 
   public:
     /**
@@ -49,7 +49,7 @@ class Bitref {
      * @param wordRef Reference to a word in the bitvector
      * @param bitmask Bitmask of the form (1 << bitIdx)
      */
-    Bitref(size_t& wordRef, size_t bitmask)
+    Bitref(uint64_t& wordRef, uint64_t bitmask)
         : wordRef(wordRef), bitmask(bitmask) {
     }
 
@@ -89,9 +89,9 @@ class Bitref {
 
 class Bitvec {
   private:
-    size_t N;                   // size of the bitvector
-    std::vector<size_t> bv;     // actual bitvector
-    std::vector<size_t> counts; // interleaved 1st and 2nd level counts
+    uint64_t N;                   // size of the bitvector
+    std::vector<uint64_t> bv;     // actual bitvector
+    std::vector<uint64_t> counts; // interleaved 1st and 2nd level counts
 
   public:
     /**
@@ -99,10 +99,10 @@ class Bitvec {
      * @param p Position
      * @return true or false
      */
-    bool operator[](size_t p) const {
+    bool operator[](uint64_t p) const {
         assert(p < N);
-        size_t w = p / 64;
-        size_t b = p % 64;
+        uint64_t w = p / 64;
+        uint64_t b = p % 64;
         return (bv[w] & (1ull << b)) != 0;
     }
 
@@ -111,10 +111,10 @@ class Bitvec {
      * @param p Position
      * @return Bit reference object
      */
-    Bitref operator[](size_t p) {
+    Bitref operator[](uint64_t p) {
         assert(p < N);
-        size_t w = p / 64;
-        size_t b = p % 64;
+        uint64_t w = p / 64;
+        uint64_t b = p % 64;
         return Bitref(bv[w], 1ull << b);
     }
 
@@ -122,10 +122,10 @@ class Bitvec {
      * Create an index for the bitvector to support fast rank operations
      */
     void index() {
-        counts = std::vector<size_t>((bv.size() + 7) / 4, 0ull);
+        counts = std::vector<uint64_t>((bv.size() + 7) / 4, 0ull);
 
-        size_t countL1 = 0, countL2 = 0;
-        for (size_t w = 0, q = 0; w < bv.size(); w++) {
+        uint64_t countL1 = 0, countL2 = 0;
+        for (uint64_t w = 0, q = 0; w < bv.size(); w++) {
             if (w % 8 == 0) { // store the L1 counts
                 countL1 += countL2;
                 counts[q] = countL1;
@@ -142,9 +142,8 @@ class Bitvec {
      * Get the number of 1-bits within the range [0...p[ (preceding pos p)
      * @param p Position
      */
-    size_t rank(size_t p) const {
+    uint64_t rank(uint64_t p) const {
         // 3 - 5 lines of code
-        // SLIDE 17 FMINDEX
         assert(p < N);
         return firstLevelCounts(p/64)+secondLevelCounts(p/64)+popcount(p/64, p);
     }
@@ -153,7 +152,7 @@ class Bitvec {
      * Get the first level count
      * @param w the word index to get the first level count of
      */
-    size_t firstLevelCounts(size_t w) const {
+    uint64_t firstLevelCounts(uint64_t w) const {
         return counts[(w / 8) * 2];
     }
 
@@ -161,8 +160,8 @@ class Bitvec {
      * Get the second level count
      * @param w the word index to get the second level count of
      */
-    size_t secondLevelCounts(size_t w) const {
-        size_t q = (w / 8) * 2; // counts index
+    uint64_t secondLevelCounts(uint64_t w) const {
+        uint64_t q = (w / 8) * 2; // counts index
         int64_t t = (w % 8) - 1;
         return counts[q + 1] >> (t + (t >> 60 & 8)) * 9 & 0x1FF;
     }
@@ -172,7 +171,7 @@ class Bitvec {
      * @param w the word index
      * @param b the bit offset
      */
-    size_t popcount(size_t w, size_t b) const {
+    uint64_t popcount(uint64_t w, uint64_t b) const {
         return __builtin_popcountll((bv[w] << 1) << (63 - b));
     }
 
@@ -182,8 +181,8 @@ class Bitvec {
      */
     void write(std::ofstream& ofs) const {
         ofs.write((char*)&N, sizeof(N));
-        ofs.write((char*)bv.data(), bv.size() * sizeof(size_t));
-        ofs.write((char*)counts.data(), counts.size() * sizeof(size_t));
+        ofs.write((char*)bv.data(), bv.size() * sizeof(uint64_t));
+        ofs.write((char*)counts.data(), counts.size() * sizeof(uint64_t));
     }
 
     /**
@@ -194,17 +193,17 @@ class Bitvec {
         ifs.read((char*)&N, sizeof(N));
 
         bv.resize((N + 63) / 64);
-        ifs.read((char*)bv.data(), bv.size() * sizeof(size_t));
+        ifs.read((char*)bv.data(), bv.size() * sizeof(uint64_t));
 
         counts.resize((bv.size() + 7) / 4);
-        ifs.read((char*)counts.data(), counts.size() * sizeof(size_t));
+        ifs.read((char*)counts.data(), counts.size() * sizeof(uint64_t));
     }
 
     /**
      * Return the size of the bitvector
      * @return The size of the bitvector
      */
-    size_t size() const {
+    uint64_t size() const {
         return N;
     }
 
@@ -225,7 +224,7 @@ class Bitvec {
      * Constructor
      * @param N Number of bits in the bitvector
      */
-    Bitvec(size_t N) : N(N), bv((N + 63) / 64, 0ull) {
+    Bitvec(uint64_t N) : N(N), bv((N + 63) / 64, 0ull) {
     }
 };
 

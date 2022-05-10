@@ -8,7 +8,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
 
 typedef uint32_t length_t;
 
@@ -145,12 +144,11 @@ class BandedMatrix {
     length_t updateMatrixCell(bool notMatch, unsigned int row,
                               unsigned int column) {
         // 6 lines of code
-        
         if(column==0) at(row, column) = row;
         else if(row==0) at(row, column) = column;
         else {
             int s = notMatch ? 1 : 0;
-            at(row, column) = min(min(at(row-1, column-1) + s, at(row, column-1) + 1), at(row-1, column) + 1);
+            at(row, column) = std::min(std::min(at(row-1, column-1) + s, at(row, column-1) + 1), at(row-1, column) + 1);
         }
         return at(row, column);
     }
@@ -164,13 +162,21 @@ class BandedMatrix {
      */
     length_t updateMatrixRow(const Substring& pattern, length_t row, char c) {
         // 5 - 7 lines of code
-        
-        vector<length_t> rowValues;
-        for(int j=0; j<=n; j++){
-            bool match = pattern[j-1] == c ? true : false;
-            rowValues.push_back(updateMatrixCell(match, row, j));
+
+        // Handle the case where row is not present in the matrix
+        // Do not delete these lines
+        if (row >= getNumberOfRows()) {
+            // if the row exceeds the rows of the matrix return maximal value
+            return std::numeric_limits<length_t>::max();
         }
-        return distance(rowValues.begin(), min_element(rowValues.begin(), rowValues.end()));
+        
+        length_t currentMin = std::numeric_limits<length_t>::max();
+        for (int j = getFirstColumn(row); j <= getLastColumn(row); j++){
+            bool notMatch = (c==pattern[j-1]) ? false: true;
+            length_t newMin = updateMatrixCell(notMatch, row, j);
+            if(newMin < currentMin) currentMin = newMin;
+        }
+        return currentMin;
     }
 
     /**
