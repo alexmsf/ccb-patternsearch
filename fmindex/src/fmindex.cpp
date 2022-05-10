@@ -288,15 +288,16 @@ void FMIndex::extendFMPos(const Range& range, const length_t& depth,
     for (length_t i=1; i<sigma.size(); i++){
         if(addCharLeft(i, range, r)) stack.push_back(FMPosExt(sigma.i2c(i), r, depth+1));
     }
-
 }
 
 void FMIndex::convertFMOccToTextOcc(const FMOcc& fmocc,
                                     std::vector<TextOcc>& textOcc) const {
     // 3 - 4 lines of code
-    throw std::runtime_error(
-        "ConvertFMOccToTextOcc has not been implemented yet!");
+    for(length_t i=fmocc.getRange().getBegin(); i<fmocc.getRange().getEnd(); i++ ){
+        textOcc.push_back(TextOcc(Range(findSA(i), findSA(i)+fmocc.getDepth()), fmocc.getDistance()));
+    }
 }
+
 // ============================================================================
 // FMIndex Integration:  week 2
 // ============================================================================
