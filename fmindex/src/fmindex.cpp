@@ -326,13 +326,16 @@ vector<TextOcc> FMIndex::naiveApproxMatch(const string& pattern,
 
         // Get the final element from the stack and pop it back (= remove from
         // the stack)
-        // Uncomment these lines
-        /*  FMPosExt currentPos = stack.back();
-         stack.pop_back(); */
+        FMPosExt currentPos = stack.back();
+        stack.pop_back();
 
         // 7 - 15 lines of code
-        throw std::runtime_error(
-            "naiveApproxMatch has not been implemented yet");
+        length_t minimalEditDist = matrix.updateMatrixRow(p, currentPos.getRow(), currentPos.getCharacter());
+        if(minimalEditDist<k) extendFMPos(currentPos.getRange(), currentPos.getDepth(), stack);
+        if(matrix.inFinalColumn(currentPos.getRow())) {
+            length_t matrixValueFinalCol = matrix.getValueInFinalColumn(currentPos.getRow());
+            if(matrixValueFinalCol<=k) occ.push_back(FMOcc(currentPos, matrixValueFinalCol));
+        }      
     }
 
     return filterRedundantMatches(occ, k);
