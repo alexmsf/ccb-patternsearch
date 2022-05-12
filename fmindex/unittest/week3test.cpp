@@ -30,7 +30,7 @@ TEST(CumulativeBitvec, PrevOccTest) {
     vector<size_t> expVal = vector<size_t>(sigma.size(), 0);
     for (size_t i = 0; i < BWT.size(); i++) {
         for (size_t cIdx = 0; cIdx < sigma.size(); cIdx++)
-            EXPECT_EQ(test.prevOcc(cIdx, i), expVal[cIdx]);
+            EXPECT_EQ(test.cumulocc(cIdx, i), expVal[cIdx]);
 
         for (int c = sigma.c2i(BWT[i]) + 1; c < (int)sigma.size(); c++)
             expVal[c]++;
@@ -105,11 +105,14 @@ TEST_F(FunctionalityTest, AddCharLeftTest) {
     EXPECT_EQ(startRanges,
               RangePair(Range(1819937, 1822541), Range(694190, 696794)));
 
+    // Try extension that should fail
     EXPECT_EQ(bifmindex.addCharLeft(
                   1,
                   RangePair(Range(3355844, 3355848), Range(4692519, 4692523)),
                   startRanges),
               false);
+
+    // check if range has been made empty after extension failed
     EXPECT_EQ(startRanges, RangePair(0, 0, 0, 0));
 }
 
@@ -137,11 +140,14 @@ TEST_F(FunctionalityTest, AddCharRightTest) {
     EXPECT_EQ(startRanges,
               RangePair(Range(626942, 630039), Range(1782121, 1785218)));
 
+    // Try extension that should fail
     EXPECT_EQ(bifmindex.addCharLeft(
                   1,
                   RangePair(Range(3355844, 3355848), Range(4692519, 4692523)),
                   startRanges),
               false);
+
+    // check if range has been made empty after extension failed
     EXPECT_EQ(startRanges, RangePair(0, 0, 0, 0));
 }
 

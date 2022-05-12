@@ -23,6 +23,8 @@
 #include <array>
 #include <cstdlib>
 #include <vector>
+#include <cstdint>
+#include <string>
 
 #include "assert.h"
 

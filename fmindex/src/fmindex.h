@@ -313,18 +313,6 @@ class TextOcc {
     }
 
     /**
-     * Constructor
-     * @param range, the range of this occurrence in the text
-     * @param distance, the (edit or hamming) distance to the mapped read of
-     * this occurrence
-     * @param CIGAR the CIGAR string of the match
-     */
-    TextOcc(Range range, length_t distance,
-            std::vector<std::pair<char, uint>>& CIGAR)
-        : range(range), distance(distance) {
-    }
-
-    /**
      * Constructor for an invalid text occurrence (empty range)
      */
     TextOcc() : range(0, 0) {
@@ -520,12 +508,12 @@ class FMIndex {
      * Finds the best paired match of a pair of reads, given the insertion size.
      * @param reads  a pair of reads to be matched, one against the forward
      * strand and one against the backward strand.
-     * @param insSize the average distance between the two extreme ends of the
-     * reads closest together.
+     * @param meanInsSize the average distance between the two extreme ends of
+     * the reads closest together.
      */
     std::tuple<length_t, length_t, bool>
     bestPairedMatch(const std::pair<std::string, std::string>& reads,
-                    const length_t& insSize) const;
+                    const length_t& meanInsSize) const;
 
     // ============================================================================
     // FUNCTIONALITY WEEK 2

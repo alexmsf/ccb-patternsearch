@@ -28,7 +28,7 @@
 #include "bitvec.h"
 
 // ============================================================================
-// CLASS BWT REPRESENTATION (supports occ(c,k) and prevOcc(c,k) in O(1) time)
+// CLASS BWT REPRESENTATION (supports occ(c,k) and cumulocc(c,k) in O(1) time)
 // ============================================================================
 
 template <size_t S>          // S is the size of the alphabet (including '$')
@@ -77,12 +77,12 @@ class CumulativeBitvectors { // e.g. S = 5 for DNA (A,C,G,T + $)
     }
 
     /**
-     * Get occurrence count of character c in the range BWT[0...k[
+     * Get occurrence count of character c in the range BWT[0...j[
      * @param cIdx Character index
-     * @param k index
-     * @return occ(c, k)
+     * @param j index
+     * @return occ(c, j)
      */
-    size_t occ(int cIdx, size_t k) const {
+    size_t occ(int cIdx, size_t j) const {
         // The $-character (cIdx == 0) is not encoded in the bitvector.
         // Hence, use index cIdx-1 in the bitvector.
 
@@ -92,17 +92,17 @@ class CumulativeBitvectors { // e.g. S = 5 for DNA (A,C,G,T + $)
 
     /**
      * Get cumulative occurrence count of characters SMALLER than c
-     * in the range BWT[0...k[
+     * in the range BWT[0...j[
      * @param cIdx Character index
-     * @param k index
-     * @return prevOcc(c, k)
+     * @param j index
+     * @return cumulocc(c, j)
      */
-    size_t prevOcc(int cIdx, size_t k) const {
+    size_t cumulocc(int cIdx, size_t j) const {
         // The $-character (cIdx == 0) is not encoded in the bitvector.
         // Hence, use index cIdx-1 in the bitvector.
 
         // 3 - 6 lines of code
-        throw std::runtime_error("prevOcc has not been implemented yet!");
+        throw std::runtime_error("cumulocc has not been implemented yet!");
     }
 };
 
