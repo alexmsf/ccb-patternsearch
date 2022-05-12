@@ -20,7 +20,7 @@ TEST(CumulativeBitvec, OccTest) {
     }
 }
 
-TEST(CumulativeBitvec, PrevOccTest) {
+TEST(CumulativeBitvec, CumulOccTest) {
     // alphabet size of string (including '$') below == 20
     string BWT("Hello,Iamastringwith$alargeralphabetsize");
     Alphabet<32> sigma(BWT);

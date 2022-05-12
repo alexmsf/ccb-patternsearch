@@ -36,6 +36,18 @@ string
 vector
 -
 
+/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.cpp
+bidirectionalfmindex.h
+/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
+bandmatrix.h
+/home/alexandra/CCB/fmindex/src/bandmatrix.h
+
+/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
+cumulativebitvec.h
+/home/alexandra/CCB/fmindex/src/cumulativebitvec.h
+fmindex.h
+/home/alexandra/CCB/fmindex/src/fmindex.h
+
 /home/alexandra/CCB/fmindex/src/bitvec.h
 string.h
 -
@@ -48,19 +60,17 @@ fstream
 vector
 -
 
-/home/alexandra/CCB/fmindex/src/fmindex.cpp
-fmindex.h
-/home/alexandra/CCB/fmindex/src/fmindex.h
-bandmatrix.h
-/home/alexandra/CCB/fmindex/src/bandmatrix.h
-fstream
+/home/alexandra/CCB/fmindex/src/cumulativebitvec.h
+array
 -
-iostream
+cstdlib
 -
-string
+vector
 -
-cmath
--
+alphabet.h
+/home/alexandra/CCB/fmindex/src/alphabet.h
+bitvec.h
+/home/alexandra/CCB/fmindex/src/bitvec.h
 
 /home/alexandra/CCB/fmindex/src/fmindex.h
 algorithm

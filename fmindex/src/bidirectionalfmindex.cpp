@@ -24,8 +24,10 @@ void BiFMIndex::read(const string& base, bool verbose) {
 void BiFMIndex::createRevBWTFromRevSA(const vector<length_t>& revSA,
                                       string& revBWT) {
     // 5-10 lines of code
-    std::cout << "Warning createRevBWTFromRevSA has not been implmented yet!"
-              << std::endl;
+    revBWT.resize(revSA.size());
+    for (size_t i=0; i<revSA.size(); i++){
+        revBWT[i] = revSA[i] > 0 ? text[text.size()-revSA[i]] : '$';
+    }
 }
 
 bool BiFMIndex::addCharRight(length_t charIdx, const RangePair& originalRanges,

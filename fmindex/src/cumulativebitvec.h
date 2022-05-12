@@ -87,7 +87,9 @@ class CumulativeBitvectors { // e.g. S = 5 for DNA (A,C,G,T + $)
         // Hence, use index cIdx-1 in the bitvector.
 
         // 3 - 6 lines of code
-        throw std::runtime_error("occ has not been implemented yet!");
+        if(cIdx==0) return j<=dollarPos ? 0 : 1;
+        if(cIdx==1) return bvs[cIdx-1].rank(j);
+        return (bvs[cIdx-1].rank(j))-(bvs[cIdx-2].rank(j));
     }
 
     /**
@@ -102,7 +104,9 @@ class CumulativeBitvectors { // e.g. S = 5 for DNA (A,C,G,T + $)
         // Hence, use index cIdx-1 in the bitvector.
 
         // 3 - 6 lines of code
-        throw std::runtime_error("cumulocc has not been implemented yet!");
+        if(cIdx==0) return 0;
+        if(j>dollarPos) return (size_t)(bvs[cIdx-1].rank(j)-occ(cIdx, j))+1;
+        return bvs[cIdx-1].rank(j)-occ(cIdx, j);
     }
 };
 

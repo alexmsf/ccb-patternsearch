@@ -187,6 +187,7 @@ class BandedMatrix {
      * final column
      */
     bool inFinalColumn(length_t row) const {
+        assert(row < getNumberOfRows());
         return (length_t)getLastColumn(row) == n - 1;
     }
 
