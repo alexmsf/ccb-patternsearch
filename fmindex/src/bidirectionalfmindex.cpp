@@ -93,14 +93,14 @@ RangePair BiFMIndex::matchExactBidirectionally(const Substring& str,
     assert(dir == str.getDirection());
 
     // 5 - 10 lines of code
-    /*for (length_t i = 0; i < str.size(); i++) {
+    for (length_t i = 0; i < str.size(); i++) {
         bool add = dir == FORWARD ? addCharRight(sigma.c2i(str[i]), ranges, ranges) : addCharLeft(sigma.c2i(str[i]), ranges, ranges); 
         if(!add) return RangePair();
     }
     //for (length_t i = range.getBegin(); i < range.getEnd(); i++) result.push_back(findSA(i));
-    return ranges;*/
-    throw runtime_error(
-        "matchExactBidirectionally has not been implemented yet");
+    return ranges;
+    //throw runtime_error(
+    //    "matchExactBidirectionally has not been implemented yet");
 }
 
 void BiFMIndex::recApproxMatch(const Search& s, const BiFMOcc& startOcc,
