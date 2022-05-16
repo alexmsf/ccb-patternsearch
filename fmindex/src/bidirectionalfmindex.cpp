@@ -76,14 +76,12 @@ void BiFMIndex::extendFMPos(const RangePair& ranges, const length_t& depth,
     RangePair r=ranges;
     for (length_t i=1; i<sigma.size(); i++){
         if(dir == FORWARD) {
-            if(addCharLeft(i, ranges, r)) stack.push_back(BiFMPosExt(sigma.i2c(i), r, depth+1));
+            if(addCharRight(i, ranges, r)) stack.push_back(BiFMPosExt(sigma.i2c(i), r, depth+1));
         }
         else {
             if(addCharLeft(i, ranges, r)) stack.push_back(BiFMPosExt(sigma.i2c(i), r, depth+1));   
         }
     }
-    //throw std::runtime_error("extendFMPos has not been implemented yet!");
-
 }
 
 RangePair BiFMIndex::matchExactBidirectionally(const Substring& str,
