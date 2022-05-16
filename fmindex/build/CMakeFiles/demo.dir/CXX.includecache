@@ -72,16 +72,6 @@ alphabet.h
 bitvec.h
 /home/alexandra/CCB/fmindex/src/bitvec.h
 
-/home/alexandra/CCB/fmindex/src/demo.cpp
-bandmatrix.h
-/home/alexandra/CCB/fmindex/src/bandmatrix.h
-bidirectionalfmindex.h
-/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
-searchscheme.h
-/home/alexandra/CCB/fmindex/src/searchscheme.h
-chrono
--
-
 /home/alexandra/CCB/fmindex/src/fmindex.h
 algorithm
 -
@@ -97,12 +87,6 @@ substring.h
 /home/alexandra/CCB/fmindex/src/substring.h
 suffixarray.h
 /home/alexandra/CCB/fmindex/src/suffixarray.h
-
-/home/alexandra/CCB/fmindex/src/searchscheme.h
-bidirectionalfmindex.h
-/home/alexandra/CCB/fmindex/src/bidirectionalfmindex.h
-sstream
--
 
 /home/alexandra/CCB/fmindex/src/substring.h
 string

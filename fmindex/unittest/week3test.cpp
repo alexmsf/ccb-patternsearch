@@ -80,6 +80,7 @@ TEST_F(ConstructionTest, CreateRevBWTTest) {
     bifmindex.createRevBWTFromRevSA(SA, revBWT);
 
     EXPECT_EQ(revBWT.substr(10000, 541), substr);
+    EXPECT_EQ(revBWT[0], bifmindex.getText()[0]);
 }
 
 TEST_F(FunctionalityTest, AddCharLeftTest) {
